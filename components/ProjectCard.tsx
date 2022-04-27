@@ -34,7 +34,7 @@ const ProjectCard: FunctionComponent<{
         onClick={() => setShowDetails(id)}
         width={300}
         height={150}
-        layout="intrinsic"
+        layout="responsive"
       />
 
       <p className="my-2 text-center">{name}</p>

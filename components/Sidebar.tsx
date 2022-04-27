@@ -24,9 +24,9 @@ const Sidebar = () => {
           src="/images/profile.png"
           alt="profile avatar"
           objectFit="cover"
-          width={100}
-          height={100}
-          layout="responsive"
+          width={128}
+          height={128}
+          layout="intrinsic"
         />
       </div>
 
@@ -34,7 +34,7 @@ const Sidebar = () => {
         <span className="text-green ">Avinash</span> Aryan
       </h1>
       <p className="px-2 py-1 my-3 bg-gray-200 rounded-full dark:bg-dark-200">
-        Web Developer
+        React, React Native Developer
       </p>
       <a
         href="/assets/Avinash Aryan Resume.pdf"

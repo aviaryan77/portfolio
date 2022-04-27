@@ -9,12 +9,10 @@ const NavItem: FunctionComponent<{
   route: string;
 }> = ({ activeItem, name, route, setActiveItem }) => {
   return activeItem !== name ? (
-    <Link href={route} passHref>
-      <a>
-        <span className="hover:text-green" onClick={() => setActiveItem(name)}>
-          {name}
-        </span>
-      </a>
+    <Link scroll={false} href={route} passHref>
+      <span className="hover:text-green" onClick={() => setActiveItem(name)}>
+        {name}
+      </span>
     </Link>
   ) : null;
 };
