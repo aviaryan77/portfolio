@@ -9,7 +9,8 @@ export const NavItem: FunctionComponent<{
   handleFilterCategory: Function;
   active: string;
 }> = ({ value, handleFilterCategory, active }) => {
-  let className = 'capitalize cursor-pointer hover:text-green';
+  let className =
+    'text-center capitalize cursor-pointer whitespace-nowrap hover:text-green';
   if (active === value) className += ' text-green';
   return (
     <motion.li
@@ -31,9 +32,9 @@ const ProjectNavbar: FunctionComponent<{
       variants={stagger}
       animate="animate"
       initial="initial"
-      className="flex px-3 py-2 space-x-3 overflow-x-auto list-none"
+      className="flex py-2 space-x-3 overflow-x-auto list-none"
     >
-      {projectNavBars.map((nav) => (
+      {projectNavBars.map((nav: Category | 'all') => (
         <NavItem key={nav} value={nav} {...props} />
       ))}
     </motion.div>
