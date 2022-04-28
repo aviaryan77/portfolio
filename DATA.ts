@@ -56,7 +56,7 @@ export const languages: ISkill[] = [
   { name: 'React', level: '70%', Icon: SiReact },
   { name: 'Bootstrap', level: '58%', Icon: SiBootstrap },
   { name: 'Next JS', level: '80%', Icon: SiNextDotJs },
-  { name: 'Node & Express', level: '35%', Icon: IoLogoNodejs },
+  { name: 'Node', level: '35%', Icon: IoLogoNodejs },
 ];
 
 export const projectNavBars: Category[] | string[] = [
@@ -72,9 +72,9 @@ export const projectNavBars: Category[] | string[] = [
 ];
 
 export const tools: ISkill[] = [
-  { name: 'Figma & XD', level: '85%', Icon: CgFigma },
+  { name: 'Figma & XD', level: '50%', Icon: CgFigma },
 
-  { name: 'Framer', level: '50%', Icon: CgFramer },
+  { name: 'Framer', level: '70%', Icon: CgFramer },
 ];
 
 export const projects: IProject[] = [
@@ -118,6 +118,7 @@ export const projects: IProject[] = [
       'Mongo',
       'REST API',
       'Bootstrap',
+      'react-native',
     ],
   },
 
@@ -139,10 +140,10 @@ export const projects: IProject[] = [
     image_path: '/images/tweetme.jpeg',
     deployed_url: 'http://sumaxtweetme.pythonanywhere.com/',
     github_url: 'https://github.com/Dey-Sumit/tweetme',
-    category: ['react'],
+    category: ['react', 'react-native'],
     description:
       'First Django Project :) | Typical Social Media App where one can post,like ,comment etc',
-    key_techs: ['React', 'Django', 'Django REST API'],
+    key_techs: ['React', 'react-native'],
   },
 
   {
@@ -151,7 +152,7 @@ export const projects: IProject[] = [
     image_path: '/images/color.jpeg',
     deployed_url: '!#',
     github_url: 'https://github.com/Dey-Sumit/color-classification',
-    category: ['express'],
+    category: ['express', 'react-native'],
     description:
       'Tried ML with JS :) | this app classifies a color using CNN algorithm in browser',
     key_techs: ['Express', 'TensorFlow.js', 'Vanilla js'],
@@ -180,7 +181,7 @@ export const projects: IProject[] = [
     image_path: '/images/football.png',
     deployed_url: 'https://o-my-goal.web.app/',
     github_url: 'https://github.com/Dey-Sumit/football-app',
-    category: ['react'],
+    category: ['react', 'web-app'],
     description:
       'o my goal replica where an user can keep an eye on his favorite club.This app will keep providing \n all the statistics of that club.all the fans can also chat ',
     key_techs: ['React', 'Redux', 'Firebase Auth', 'API', 'Sass', 'Bootstrap'],
@@ -191,7 +192,7 @@ export const projects: IProject[] = [
     image_path: '/images/football.png',
     deployed_url: 'https://o-my-goal.web.app/',
     github_url: 'https://github.com/Dey-Sumit/football-app',
-    category: ['react'],
+    category: ['react', 'web-app'],
     description:
       'o my goal replica where an user can keep an eye on his favorite club.This app will keep providing \n all the statistics of that club.all the fans can also chat ',
     key_techs: ['React', 'Redux', 'Firebase Auth', 'API', 'Sass', 'Bootstrap'],
