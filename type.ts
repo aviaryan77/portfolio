@@ -13,12 +13,12 @@ export interface ISkill {
 }
 
 export interface IProject {
-  id: number;
+  id: string;
   name: string;
   description: string;
   image_path: string;
-  deployed_url: string;
-  github_url: string;
+  deployed_url: string | null;
+  github_url: string | null;
   category: Category[];
   key_techs: string[];
 }
@@ -28,5 +28,7 @@ export type Category =
   | 'node'
   | 'express'
   | 'mongo'
-  | 'django'
+  | 'next'
+  | 'mobile-app'
+  | 'web-app'
   | 'react-native';

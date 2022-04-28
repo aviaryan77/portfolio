@@ -4,66 +4,82 @@ import { AiOutlineAntDesign } from '@react-icons/all-files/ai/AiOutlineAntDesign
 import { AiOutlineApi } from '@react-icons/all-files/ai/AiOutlineApi';
 import { MdDeveloperMode } from '@react-icons/all-files/md/MdDeveloperMode';
 import { BsCircleFill } from '@react-icons/all-files/bs/BsCircleFill';
-import { IconType } from '@react-icons/all-files';
-import { IProject, IService, ISkill } from './type';
+import { CgFigma } from '@react-icons/all-files/cg/CgFigma';
+import { SiNextDotJs } from '@react-icons/all-files/si/SiNextDotJs';
+import { SiTypescript } from '@react-icons/all-files/si/SiTypescript';
+import { SiBootstrap } from '@react-icons/all-files/si/SiBootstrap';
+import { SiReact } from '@react-icons/all-files/si/SiReact';
+import { CgFramer } from '@react-icons/all-files/cg/CgFramer';
+import { AiFillHtml5 } from '@react-icons/all-files/ai/AiFillHtml5';
+import { IoLogoJavascript } from '@react-icons/all-files/io/IoLogoJavascript';
+import { IoLogoNodejs } from '@react-icons/all-files/io/IoLogoNodejs';
+import { Category, IProject, IService, ISkill } from './type';
 
 export const services: IService[] = [
   {
     Icon: RiComputerLine,
     title: 'Frontend Development',
     about:
-      'I can build a beautiful and scalable SPA using <b> HTML</b>,<b>CSS</b>   and <b>React.js</b> ',
+      'I can build a beautiful and scalable SPA using <b> HTML</b>,<b>CSS</b> and <b>React.js</b>. I have hand on experience working with <b> Tailwind CSS, Chakra UI, Bootstrap ReactStrap </b> etc...</>',
   },
   {
     Icon: FaServer,
-    title: 'Backend  Development',
+    title: 'SEO',
     about:
-      'handle database, server, api using <b>Express </b> & other popular frameworks',
+      ' With help of <b>NEXT Js</> features, websites not only look stunning but also have high performance and good SEO score on all devices. Most of the project website have 90-100 score',
   },
   {
     Icon: AiOutlineApi,
     title: 'API Development',
     about:
-      'I can develop robust  REST API using <b>django-rest-api</b>  & <b>Node API</b> ',
+      'I can develop robust  REST API using  <b>Node-express API</b> & <b>Graph QL </>',
   },
   {
     Icon: MdDeveloperMode,
-    title: 'Competitive Coder',
-    about: 'a daily problem solver in <b>HackerRank</b>  and <b>Leet Code</b> ',
+    title: 'Mobile App Development',
+    about:
+      'Build and deploy pixel perfect mobile app with <b>React Native</b>  and <b>Animated API</b> for both iOS and Android',
   },
   {
     Icon: AiOutlineAntDesign,
     title: 'UI/UX designer',
     about:
-      'stunning user interface designer using <b>Figma</b>  and  <b>Framer</b> ',
-  },
-  {
-    Icon: RiComputerLine,
-    title: 'Whatever',
-    about:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quis minima autem!',
+      'Stunning user interface designer using <b>Figma</b>  and  <b>Framer</b> ',
   },
 ];
 
 export const languages: ISkill[] = [
-  { name: 'Python', level: '70%', Icon: BsCircleFill },
-  { name: 'JavScript', level: '60%', Icon: BsCircleFill },
-  { name: 'React Native', level: '80%', Icon: BsCircleFill },
-  { name: 'React', level: '70%', Icon: BsCircleFill },
-  { name: 'Bootstrap', level: '78%', Icon: BsCircleFill },
-  { name: 'Next JS', level: '50%', Icon: BsCircleFill },
+  { name: 'JavaScript', level: '70%', Icon: IoLogoJavascript },
+  { name: 'HTML & CSS', level: '85%', Icon: AiFillHtml5 },
+  { name: 'TypeScript', level: '55%', Icon: SiTypescript },
+  { name: 'React Native', level: '80%', Icon: MdDeveloperMode },
+  { name: 'React', level: '70%', Icon: SiReact },
+  { name: 'Bootstrap', level: '58%', Icon: SiBootstrap },
+  { name: 'Next JS', level: '80%', Icon: SiNextDotJs },
+  { name: 'Node & Express', level: '35%', Icon: IoLogoNodejs },
+];
+
+export const projectNavBars: Category[] | string[] = [
+  'all',
+  'mobile-app',
+  'web-app',
+  'react',
+  'react-native',
+  'next',
+  'node',
+  'express',
+  'mongo',
 ];
 
 export const tools: ISkill[] = [
-  { name: 'Figma', level: '85%', Icon: BsCircleFill },
-  { name: 'Photoshop', level: '45%', Icon: BsCircleFill },
-  { name: 'Illustrator', level: '60%', Icon: BsCircleFill },
-  { name: 'Framer', level: '50%', Icon: BsCircleFill },
+  { name: 'Figma & XD', level: '85%', Icon: CgFigma },
+
+  { name: 'Framer', level: '50%', Icon: CgFramer },
 ];
 
 export const projects: IProject[] = [
   {
-    id: 1,
+    id: '1',
     name: 'COVID Tracker',
     description:
       'This app shows a statistical view about corona virus over the world',
@@ -74,7 +90,7 @@ export const projects: IProject[] = [
     key_techs: ['React', 'Chart.js', 'Material UI'],
   },
   {
-    id: 2,
+    id: '2',
     name: 'Algorithm Visualizer',
     image_path: '/images/algoVisual.png',
     deployed_url: 'https://visual-algorithm.web.app/',
@@ -86,7 +102,7 @@ export const projects: IProject[] = [
   },
 
   {
-    id: 3,
+    id: '3',
     name: 'Dev Talks',
     image_path: '/images/dev.jpeg',
     deployed_url: 'https://dev-talks.herokuapp.com/',
@@ -106,7 +122,7 @@ export const projects: IProject[] = [
   },
 
   {
-    id: 4,
+    id: '4',
     name: 'Realtime Chat App',
     image_path: '/images/chatapp.jpeg',
     deployed_url: 'https://sumit-chat.netlify.app/',
@@ -118,19 +134,19 @@ export const projects: IProject[] = [
   },
 
   {
-    id: 5,
+    id: '5',
     name: 'Tweeter Clone',
     image_path: '/images/tweetme.jpeg',
     deployed_url: 'http://sumaxtweetme.pythonanywhere.com/',
     github_url: 'https://github.com/Dey-Sumit/tweetme',
-    category: ['django', 'react'],
+    category: ['react'],
     description:
       'First Django Project :) | Typical Social Media App where one can post,like ,comment etc',
     key_techs: ['React', 'Django', 'Django REST API'],
   },
 
   {
-    id: 6,
+    id: '6',
     name: 'Color Classification using tf.js',
     image_path: '/images/color.jpeg',
     deployed_url: '!#',
@@ -141,7 +157,7 @@ export const projects: IProject[] = [
     key_techs: ['Express', 'TensorFlow.js', 'Vanilla js'],
   },
   {
-    id: 7,
+    id: '7',
     name: 'YouTube using YouTube ',
     image_path: '/images/youtubeClone.png',
     deployed_url: 'https://not-utube.web.app/',
@@ -159,7 +175,18 @@ export const projects: IProject[] = [
     ],
   },
   {
-    id: 8,
+    id: '8',
+    name: 'Football App',
+    image_path: '/images/football.png',
+    deployed_url: 'https://o-my-goal.web.app/',
+    github_url: 'https://github.com/Dey-Sumit/football-app',
+    category: ['react'],
+    description:
+      'o my goal replica where an user can keep an eye on his favorite club.This app will keep providing \n all the statistics of that club.all the fans can also chat ',
+    key_techs: ['React', 'Redux', 'Firebase Auth', 'API', 'Sass', 'Bootstrap'],
+  },
+  {
+    id: '9',
     name: 'Football App',
     image_path: '/images/football.png',
     deployed_url: 'https://o-my-goal.web.app/',

@@ -24,7 +24,7 @@ const Sidebar = () => {
       </div>
 
       <h1 className="my-4 text-3xl font-medium tracking-wider font-kaushan">
-        <span className="text-green ">Avinash</span> Aryan
+        <span className="text-blue-600 ">Avinash</span> Aryan
       </h1>
       <p className="px-2 py-1 my-3 bg-gray-200 rounded-full dark:bg-dark-200">
         React, React Native Developer
@@ -37,7 +37,7 @@ const Sidebar = () => {
         <GiTie className="w-6 h-6" /> <span>Download Resume</span>
       </a>
       {/* social icons */}
-      <div className="flex justify-around w-9/12 mx-auto my-5 text-green md:w-full">
+      <div className="flex justify-around w-9/12 mx-auto my-5 text-blue-600 md:w-full">
         <a href="https://twitter.com/avi_aryan_">
           <AiOutlineTwitter className="w-8 h-8 cursor-pointer" />
         </a>

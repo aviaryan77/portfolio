@@ -1,4 +1,7 @@
+import { fadeInLeft, stagger } from '@/animations';
+import { projectNavBars } from '@/DATA';
 import { Category } from '@/type';
+import { motion } from 'framer-motion';
 import { FunctionComponent } from 'react';
 
 export const NavItem: FunctionComponent<{
@@ -9,9 +12,13 @@ export const NavItem: FunctionComponent<{
   let className = 'capitalize cursor-pointer hover:text-green';
   if (active === value) className += ' text-green';
   return (
-    <li className={className} onClick={() => handleFilterCategory(value)}>
+    <motion.li
+      variants={fadeInLeft}
+      className={className}
+      onClick={() => handleFilterCategory(value)}
+    >
       {value}
-    </li>
+    </motion.li>
   );
 };
 
@@ -20,14 +27,16 @@ const ProjectNavbar: FunctionComponent<{
   active: string;
 }> = (props) => {
   return (
-    <div className="flex px-3 py-2 space-x-3 overflow-x-auto list-none">
-      <NavItem value="all" {...props} />
-      <NavItem value="react" {...props} />
-      <NavItem value="mongo" {...props} />
-      <NavItem value="node" {...props} />
-      <NavItem value="express" {...props} />
-      <NavItem value="react-native" {...props} />
-    </div>
+    <motion.div
+      variants={stagger}
+      animate="animate"
+      initial="initial"
+      className="flex px-3 py-2 space-x-3 overflow-x-auto list-none"
+    >
+      {projectNavBars.map((nav) => (
+        <NavItem value={nav} {...props} />
+      ))}
+    </motion.div>
   );
 };
 

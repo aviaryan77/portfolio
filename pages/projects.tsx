@@ -9,7 +9,7 @@ import React, { useState } from 'react';
 const Projects = () => {
   const [filteredProject, setFilteredProject] = useState(projects);
   const [active, setActive] = useState<Category | 'all'>('all');
-  const [showDetails, setShowDetails] = useState<number | null>(null);
+  const [showDetails, setShowDetails] = useState<string | null>(null);
   const handleFilterCategory = (category: Category | 'all') => {
     if (category === 'all') {
       setActive('all');
@@ -22,7 +22,7 @@ const Projects = () => {
     setFilteredProject(newArray);
     setActive(category);
   };
-  const handleShowDetails = (id: number | null) => {
+  const handleShowDetails = (id: string | null) => {
     setShowDetails(id);
     if (!!id) {
       const newArray = projects.filter((project) => project.id === id);

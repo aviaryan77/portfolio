@@ -9,8 +9,8 @@ import { AiFillProject } from '@react-icons/all-files/ai/AiFillProject';
 
 const ProjectCard: FunctionComponent<{
   project: IProject;
-  showDetails: null | number;
-  handleShowDetails: (id: null | number) => void;
+  showDetails: null | string;
+  handleShowDetails: (id: null | string) => void;
 }> = ({
   project: {
     id,
