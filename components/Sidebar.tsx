@@ -1,6 +1,6 @@
 import { AiFillGithub } from '@react-icons/all-files/ai/AiFillGithub';
 import { AiFillLinkedin } from '@react-icons/all-files/ai/AiFillLinkedin';
-import { IoLogoWhatsapp } from '@react-icons/all-files/io/IoLogoWhatsapp';
+import { AiOutlineTwitter } from '@react-icons/all-files/ai/AiOutlineTwitter';
 import { GoLocation } from '@react-icons/all-files/go/GoLocation';
 import { GiTie } from '@react-icons/all-files/gi/GiTie';
 import { useTheme } from 'next-themes';
@@ -38,8 +38,8 @@ const Sidebar = () => {
       </a>
       {/* social icons */}
       <div className="flex justify-around w-9/12 mx-auto my-5 text-green md:w-full">
-        <a href="https://wa.me/919431210691">
-          <IoLogoWhatsapp className="w-8 h-8 cursor-pointer" />
+        <a href="https://twitter.com/avi_aryan_">
+          <AiOutlineTwitter className="w-8 h-8 cursor-pointer" />
         </a>
         <a href="https://github.com/aviaryan77">
           <AiFillGithub className="w-8 h-8 cursor-pointer" />

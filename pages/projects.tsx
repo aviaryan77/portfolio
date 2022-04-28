@@ -8,7 +8,7 @@ import React, { useState } from 'react';
 
 const Projects = () => {
   const [filteredProject, setFilteredProject] = useState(projects);
-  const [active, setActive] = useState('all');
+  const [active, setActive] = useState<Category | 'all'>('all');
   const [showDetails, setShowDetails] = useState<number | null>(null);
   const handleFilterCategory = (category: Category | 'all') => {
     if (category === 'all') {
@@ -22,6 +22,16 @@ const Projects = () => {
     setFilteredProject(newArray);
     setActive(category);
   };
+  const handleShowDetails = (id: number | null) => {
+    setShowDetails(id);
+    if (!!id) {
+      const newArray = projects.filter((project) => project.id === id);
+      setFilteredProject(newArray);
+    } else {
+      handleFilterCategory(active);
+    }
+  };
+
   return (
     <motion.div
       variants={routeAnimation}
@@ -50,7 +60,7 @@ const Projects = () => {
             <ProjectCard
               project={project}
               showDetails={showDetails}
-              setShowDetails={setShowDetails}
+              handleShowDetails={handleShowDetails}
             />
           </motion.div>
         ))}

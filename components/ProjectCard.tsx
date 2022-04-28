@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { IProject } from '@/type';
 import { motion } from 'framer-motion';
-import { fadeInUp, stagger } from '@/animations';
+import { fadeInLeft, fadeInUp, stagger } from '@/animations';
 import React, { FunctionComponent } from 'react';
 import { MdClose } from '@react-icons/all-files/md/MdClose';
 import { AiFillGithub } from '@react-icons/all-files/ai/AiFillGithub';
@@ -10,7 +10,7 @@ import { AiFillProject } from '@react-icons/all-files/ai/AiFillProject';
 const ProjectCard: FunctionComponent<{
   project: IProject;
   showDetails: null | number;
-  setShowDetails: (id: null | number) => void;
+  handleShowDetails: (id: null | number) => void;
 }> = ({
   project: {
     id,
@@ -23,7 +23,7 @@ const ProjectCard: FunctionComponent<{
     key_techs,
   },
   showDetails,
-  setShowDetails,
+  handleShowDetails,
 }) => {
   return (
     <>
@@ -31,7 +31,7 @@ const ProjectCard: FunctionComponent<{
         src={image_path}
         alt={name}
         className="cursor-pointer"
-        onClick={() => setShowDetails(id)}
+        onClick={() => handleShowDetails(id)}
         width={300}
         height={150}
         layout="responsive"
@@ -54,7 +54,7 @@ const ProjectCard: FunctionComponent<{
               />
             </motion.div>
             <motion.div
-              variants={fadeInUp}
+              variants={fadeInLeft}
               className="flex justify-center my-4 space-x-3"
             >
               <a
@@ -98,7 +98,7 @@ const ProjectCard: FunctionComponent<{
             </motion.div>
           </motion.div>
           <button className="absolute p-1 bg-gray-200 rounded-full dark:bg-dark-200 top-3 right-3 focus:outline-none">
-            <MdClose size={30} onClick={() => setShowDetails(null)} />
+            <MdClose size={30} onClick={() => handleShowDetails(null)} />
           </button>
         </div>
       )}

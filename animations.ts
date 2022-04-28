@@ -9,6 +9,17 @@ export const fadeInUp = {
   },
 };
 
+export const fadeInLeft = {
+  initial: {
+    opacity: 0,
+    x: -60,
+  },
+  animate: {
+    opacity: 1,
+    x: 0,
+  },
+};
+
 export const stagger = {
   initial: {},
   animate: {
