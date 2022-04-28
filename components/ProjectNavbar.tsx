@@ -34,7 +34,7 @@ const ProjectNavbar: FunctionComponent<{
       className="flex px-3 py-2 space-x-3 overflow-x-auto list-none"
     >
       {projectNavBars.map((nav) => (
-        <NavItem value={nav} {...props} />
+        <NavItem key={nav} value={nav} {...props} />
       ))}
     </motion.div>
   );
