@@ -22,6 +22,7 @@ const Projects = () => {
     setFilteredProject(newArray);
     setActive(category);
   };
+
   const handleShowDetails = (id: string | null) => {
     setShowDetails(id);
     if (!!id) {
@@ -31,7 +32,8 @@ const Projects = () => {
       handleFilterCategory(active);
     }
   };
-
+  let className =
+    'col-span-12 p-2 bg-gray-200 rounded-lg sm:col-span-6 lg:col-span-4 dark:bg-dark-200';
   return (
     <motion.div
       variants={routeAnimation}
@@ -55,7 +57,11 @@ const Projects = () => {
           <motion.div
             variants={fadeInUp}
             key={project.name}
-            className="col-span-12 p-2 bg-gray-200 rounded-lg sm:col-span-6 lg:col-span-4 dark:bg-dark-200"
+            className={
+              project?.category?.includes('react-native')
+                ? className + ' row-span-3'
+                : className
+            }
           >
             <ProjectCard
               project={project}

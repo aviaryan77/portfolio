@@ -32,7 +32,9 @@ const resume = () => {
           <h5 className="my-3 text-2xl font-bold ">Experience</h5>
           <div>
             <h5 className="my-2 text-xl font-bold ">
-              Malaviya National Institute of Technology(2015-2019)
+              I started web development back in 2020...Fast forward to today, I
+              am a self taught web and mobile app developer , mainly work on
+              frontend these days.
             </h5>
             <p className="font-semibold">
               Graduated in Electrical Engineering in 2019

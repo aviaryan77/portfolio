@@ -14,9 +14,10 @@ export interface ISkill {
 
 export interface IProject {
   id: string;
+  featuredImage: string;
   name: string;
   description: string;
-  image_path: string;
+  imageArray: string[];
   deployed_url: string | null;
   github_url: string | null;
   category: Category[];
