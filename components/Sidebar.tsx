@@ -15,12 +15,12 @@ const Sidebar = () => {
     <div>
       <div className="items-center justify-center w-32 h-32 mx-auto overflow-hidden rounded-full ">
         <Image
-          width={130}
-          height={150}
+          width={128}
+          height={128}
           objectFit="cover"
           layout="intrinsic"
           alt="profile avatar"
-          src="/images/profile.jpeg"
+          src="/images/profile.png"
         />
       </div>
 
