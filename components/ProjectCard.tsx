@@ -37,8 +37,10 @@ const ProjectCard: FunctionComponent<{
   showDetails,
   handleShowDetails,
 }) => {
+  const createMarkup = () => ({ __html: description });
+
   return (
-    <>
+    <div>
       <Image
         src={featuredImage}
         alt={name}
@@ -82,22 +84,22 @@ const ProjectCard: FunctionComponent<{
               variants={fadeInLeft}
               className="flex justify-center my-4 space-x-3"
             >
-              {github_url && (
+              {!!github_url ? (
                 <a
                   href={github_url}
                   className="flex items-center px-4 py-2 space-x-3 text-lg bg-gray-200 dark:bg-dark-200 "
                 >
                   <AiFillGithub /> <span>Github</span>
                 </a>
-              )}
-              {deployed_url && (
+              ) : null}
+              {!!deployed_url ? (
                 <a
                   href={deployed_url}
                   className="flex items-center px-4 py-2 space-x-3 text-lg bg-gray-200 dark:bg-dark-200"
                 >
                   <AiFillProject /> <span>Project</span>
                 </a>
-              )}
+              ) : null}
             </motion.div>
           </motion.div>
 
@@ -108,9 +110,9 @@ const ProjectCard: FunctionComponent<{
             >
               {name}
             </motion.h2>
-            <motion.h3 variants={fadeInUp} className="mb-3 font-medium">
-              {description}
-            </motion.h3>
+            <motion.div variants={fadeInUp} className="mb-3 font-medium">
+              <p dangerouslySetInnerHTML={createMarkup()} />
+            </motion.div>
             <motion.div
               variants={stagger}
               className="flex flex-wrap mt-5 space-x-2 text-sm tracking-wider"
@@ -131,7 +133,7 @@ const ProjectCard: FunctionComponent<{
           </button>
         </div>
       )}
-    </>
+    </div>
   );
 };
 

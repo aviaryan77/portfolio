@@ -5,6 +5,7 @@ import { GoLocation } from '@react-icons/all-files/go/GoLocation';
 import { GiTie } from '@react-icons/all-files/gi/GiTie';
 import { useTheme } from 'next-themes';
 import Image from 'next/image';
+import React from 'react';
 
 const Sidebar = () => {
   const { theme, setTheme } = useTheme();
@@ -12,14 +13,14 @@ const Sidebar = () => {
   const changeTheme = () => setTheme(theme === 'light' ? 'dark' : 'light');
   return (
     <div>
-      <div className="items-center justify-center w-32 h-32 mx-auto border rounded-full ">
+      <div className="items-center justify-center w-32 h-32 mx-auto overflow-hidden rounded-full ">
         <Image
-          src="/images/profile.png"
-          alt="profile avatar"
+          width={130}
+          height={150}
           objectFit="cover"
-          width={128}
-          height={128}
           layout="intrinsic"
+          alt="profile avatar"
+          src="/images/profile.jpeg"
         />
       </div>
 
