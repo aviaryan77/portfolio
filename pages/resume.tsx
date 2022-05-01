@@ -49,7 +49,7 @@ const resume = () => {
             <li>version control using Git.</li>
 
             <p className="font-semibold">
-              Here are a few technologies I've been working with recently:
+              {`Here are a few technologies I've been working with recently:`}
             </p>
           </div>
         </motion.div>
