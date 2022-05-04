@@ -25,7 +25,7 @@ const resume = () => {
               Graduated in Electrical Engineering in 2019
             </p>
             <p className="my-3">
-              Completed 12 in 2014 from Patna Collegiate School{' '}
+              Completed 12 in 2014 from Patna Collegiate School
             </p>
             <p className="my-3">Cleared JEE MAIN and JEE ADVANCE in 2015 </p>
           </div>
@@ -35,17 +35,15 @@ const resume = () => {
           <h5 className="my-3 text-2xl font-bold ">Experience</h5>
           <div>
             <h5 className="my-2 text-xl font-bold ">
-              I started web development back in 2020...Fast forward to today, I
-              am a self taught web and mobile app developer, mainly work on
-              frontend these days.
+              I started mobile app development back in 2020...Fast forward to
+              today, I am a self taught web and mobile app developer, mainly
+              work on frontend technologies these days.
             </h5>
 
             <li>
               Worked using packaging tools like NPM (Node Package Manager), Yarn
             </li>
-            <li>
-              reporting and tracking defects using Slack, HubStaff and Trello.
-            </li>
+            <li>reporting and tracking using Slack, HubStaff and Trello.</li>
             <li>version control using Git.</li>
 
             <p className="font-semibold">
