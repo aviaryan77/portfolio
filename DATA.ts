@@ -235,6 +235,37 @@ export const projects: IProject[] = [
     key_techs: ['React-native', 'expo', 'firebase'],
   },
   {
+    id: '4c',
+    name: 'Cryptonomy',
+    featuredImage: '/images/crypto/crypto2.webp',
+    imageArray: ['/images/crypto/crypto2.webp', '/images/crypto/crypto.webp'],
+    deployed_url:
+      'https://play.google.com/store/apps/details?id=com.cryptonomy',
+    github_url: 'https://github.com/aviaryan77/Cryptonomy',
+    category: ['react-native', 'mobile-app'],
+    description: 'Cryptonomy is a real-time crypto price tracker app.',
+    key_techs: ['React-native', 'gifted-chat', 'TypeScript', 'admob', 'crypto'],
+  },
+  {
+    id: '4b',
+    name: 'Hylog',
+    featuredImage: '/images/hylog/hy1.webp',
+    imageArray: [
+      '/images/hylog/hy1.webp',
+      '/images/hylog/hy2.webp',
+      '/images/hylog/hy3.webp',
+      '/images/hylog/hy4.webp',
+      '/images/hylog/hy5.webp',
+      '/images/hylog/hy6.webp',
+    ],
+    deployed_url: null,
+    github_url: null,
+    category: ['react-native', 'mobile-app'],
+    description:
+      'Hylog is a social media chat and discussion app build with react native and firebase',
+    key_techs: ['React-native', 'gifted-chat', 'admob', 'firebase'],
+  },
+  {
     id: '8a',
     name: 'Express Login Template',
     featuredImage: '/images/expressAuth/login.webp',
@@ -249,6 +280,31 @@ export const projects: IProject[] = [
     key_techs: ['Node', 'Express', 'Bootstrap'],
   },
 
+  {
+    id: '7a',
+    name: 'Cloud Flog',
+    featuredImage: '/images/cloudflog/cf.webp',
+    imageArray: [
+      '/images/cloudflog/cf.webp',
+      '/images/cloudflog/cf1.webp',
+      '/images/cloudflog/cf2.webp',
+      '/images/cloudflog/cf3.webp',
+      '/images/cloudflog/cf4.webp',
+    ],
+    deployed_url: 'https://play.google.com/store/apps/details?id=com.cloudflog',
+    github_url: null,
+    category: ['react-native', 'mobile-app'],
+    description:
+      'The Cloud Flog is the Leading B2B trading group community app for the luxury watch trade. We connect Luxury Watch Dealers around the World to support and grow their businesses.',
+    key_techs: [
+      'Firebase Auth',
+      'react-native',
+      'redux',
+      'formik',
+      'moment js',
+      'firebase push notifications',
+    ],
+  },
   {
     id: '7',
     name: 'Trip Planner',
