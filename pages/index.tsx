@@ -15,10 +15,10 @@ const Home = () => {
       className="flex flex-col flex-grow px-6 pt-1"
     >
       <h5 className="my-3 font-medium">
-        I am MERN Stack frontend Developer. I have 2+ years of experience in Web
+        I am MERN Stack frontend Developer. I have3+ years of experience in Web
         Development and Mobile App Development using React, Next JS, React
         Native and other technologies. I am currently working full-time remotely
-        with Designs.codes as a React-Native Developer.
+        with Splitkaro as a Frontend Developer.
       </h5>
       <div className="flex-grow p-4 mt-5 -mx-6 bg-gray-400 dark:bg-dark-100">
         <h6 className="my-3 text-xl font-bold">What I Offer</h6>

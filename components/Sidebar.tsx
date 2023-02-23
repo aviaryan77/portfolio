@@ -35,7 +35,7 @@ const Sidebar = () => {
         download="CV_Avinash.pdf"
         className="flex items-center justify-center px-2 py-1 my-2 bg-gray-200 rounded-full dark:bg-dark-200"
       >
-        <GiTie className="w-6 h-6" /> <span>Download Resume</span>
+        <GiTie className="w-6 h-6" /> <span>Download Resume[Aug 2022]</span>
       </a>
       {/* social icons */}
       <div className="flex justify-around w-9/12 mx-auto my-5 text-blue-600 md:w-full">
