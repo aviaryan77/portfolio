@@ -15,7 +15,7 @@ const Home = () => {
       className="flex flex-col flex-grow px-6 pt-1"
     >
       <h5 className="my-3 font-medium">
-        I am MERN Stack frontend Developer. I have3+ years of experience in Web
+        I am MERN Stack frontend Developer. I have 3+ years of experience in Web
         Development and Mobile App Development using React, Next JS, React
         Native and other technologies. I am currently working full-time remotely
         with Splitkaro as a Frontend Developer.
