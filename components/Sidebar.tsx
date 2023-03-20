@@ -31,7 +31,7 @@ const Sidebar = () => {
         React, React Native Developer
       </p>
       <a
-        href="/CV_Avinash.pdf"
+        href="/CV_Avinash_APR_2023.pdf"
         download="CV_Avinash.pdf"
         className="flex items-center justify-center px-2 py-1 my-2 bg-gray-200 rounded-full dark:bg-dark-200"
       >
