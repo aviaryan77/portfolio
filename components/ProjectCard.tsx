@@ -39,6 +39,7 @@ const ProjectCard: FunctionComponent<{
 }) => {
   const createMarkup = () => ({ __html: description });
 
+  
   return (
     <div>
       <Image

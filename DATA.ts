@@ -84,6 +84,59 @@ export const tools: ISkill[] = [
 
 export const projects: IProject[] = [
   {
+    id: '6c',
+    name: 'Qtopia app',
+    featuredImage: '/images/qtopia-app/dashboard.webp',
+    imageArray: [
+      '/images/qtopia-app/dashboard.webp',
+      '/images/qtopia-app/wow.webp',
+      '/images/qtopia-app/quiz.webp',
+      '/images/qtopia-app/score.webp',
+      '/images/qtopia-app/leaderboard.webp',
+    ],
+    deployed_url:
+      'https://play.google.com/store/apps/details?id=com.qtopiaandroid',
+    github_url: null,
+    category: ['mobile-app', 'react-native'],
+    description: `Frontend team lead
+    Trivia app with real money game
+    State management using redux, redux-saga, redux-persist
+    Working on UPI payment integration with Decentro
+    Added Auth flow
+    Pub-sub event subscription for live quizzes
+  `,
+    key_techs: [
+      'React-native',
+      'Redux',
+      'Redux-saga',
+      'Redux-persist',
+      'Firebase',
+      'OTA-update',
+      'moment js',
+    ],
+  },
+  {
+    id: '6b',
+    name: 'Qtopia website',
+    featuredImage: '/images/qtopia-website/hero.webp',
+    imageArray: [
+      '/images/qtopia-website/hero.webp',
+      '/images/qtopia-website/features.webp',
+      '/images/qtopia-website/quizzes.webp',
+      '/images/qtopia-website/footer.webp',
+      '/images/qtopia-website/mobile-hero.webp',
+      '/images/qtopia-website/drawer.webp',
+    ],
+    deployed_url: 'https://qtopia.in/',
+    github_url: null,
+    category: ['next', 'react', 'web-app'],
+    description: `<b>Realmoney quiz trivia app</b> 
+     <li> Developed brand new landing pages with scratch
+    </li>
+  `,
+    key_techs: ['NEXT JS', 'chakra-ui', 'moment js'],
+  },
+  {
     id: '6',
     name: 'Peer Dispatch',
     featuredImage: '/images/peerdispatch/account.webp',
