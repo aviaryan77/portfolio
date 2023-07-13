@@ -15,7 +15,7 @@ const Home = () => {
       className="flex flex-col flex-grow px-6 pt-1"
     >
       <h5 className="my-3 font-medium">
-        I am an Electrical graduate from NIT Jaipur with over 3 years of
+        {`I am an Electrical graduate from NIT Jaipur with over 3 years of
         experience in cross-platform mobile app development, specializing in
         React Native. With a keen eye for detail, I have a flair for creating
         stunning animations and delivering pixel-perfect user interfaces. My
@@ -25,10 +25,10 @@ const Home = () => {
         systems or ways of doing things. Additionally, I possess an extremely
         high intuition for user experience. I am known for being an idea
         machine, always bringing fresh ideas and possibilities to the customer
-        instead of waiting for them to come to me.
+        instead of waiting for them to come to me.`}
         <br />
         <br />
-        My journey as a web developer started at the age of 19 while I was
+        {`My journey as a web developer started at the age of 19 while I was
         attending my bachelor's degree in Electrical Engineering at NIT Jaipur.
         This experience has not only widened my range of knowledge but also
         allowed me to gather experiences in various disciplines, including
@@ -36,7 +36,7 @@ const Home = () => {
         electrical engineering and a passion for technology, I bring a unique
         perspective to my development projects. I am committed to delivering
         high-quality work and exceeding client expectations at every
-        opportunity.
+        opportunity.`}
       </h5>
       <div className="flex-grow p-4 mt-5 -mx-6 bg-gray-400 dark:bg-dark-100">
         <h6 className="my-3 text-xl font-bold">What I Offer</h6>
