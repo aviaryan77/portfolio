@@ -16,6 +16,27 @@ const resume = () => {
       {/* education and experience */}
       <div className="grid gap-6 md:grid-cols-2">
         <motion.div variants={fadeInUp} initial={'initial'} animate={'animate'}>
+          <h5 className="my-3 text-2xl font-bold ">Experience</h5>
+          <div>
+            <h5 className="my-2 text-l  ">
+              I started mobile app development back in 2020...Fast forward to
+              today, I am a self taught web and mobile app developer, mainly
+              work on frontend technologies these days.These are list of Company
+              I have worked with
+            </h5>
+
+            <li className="my-2 text-x font-bold ">QTOPIA [June 2023 - Present]</li>
+            <li className="my-2 text-x font-bold ">SPLITKARO [June 2022 - Apr 2023]</li>
+            <li className="my-2 text-x font-bold ">DESIGNS.CODES [May 2021 - May 2022]</li>
+            <li className="my-2 text-x font-bold ">Twigo Technology PVT LTD [Jan 2020 - May 2021]</li>
+
+            <p className="font-semibold">
+              {`Below are a few technologies I've been working with recently:`}
+            </p>
+          </div>
+        </motion.div>
+
+        <motion.div variants={fadeInUp} initial={'initial'} animate={'animate'}>
           <h5 className="my-3 text-2xl font-bold ">Education</h5>
           <div>
             <h5 className="my-2 text-xl font-bold ">
@@ -24,31 +45,10 @@ const resume = () => {
             <p className="font-semibold">
               Graduated in Electrical Engineering in 2019
             </p>
-            <p className="my-3">
-              Completed 12 in 2014 from Patna Collegiate School
-            </p>
+
             <p className="my-3">Cleared JEE MAIN and JEE ADVANCE in 2015 </p>
-          </div>
-        </motion.div>
-
-        <motion.div variants={fadeInUp} initial={'initial'} animate={'animate'}>
-          <h5 className="my-3 text-2xl font-bold ">Experience</h5>
-          <div>
-            <h5 className="my-2 text-xl font-bold ">
-              I started mobile app development back in 2020...Fast forward to
-              today, I am a self taught web and mobile app developer, mainly
-              work on frontend technologies these days.
-            </h5>
-
-            <li>
-              Worked using packaging tools like NPM (Node Package Manager), Yarn
-            </li>
-            <li>reporting and tracking using Slack, HubStaff and Trello.</li>
-            <li>version control using Git.</li>
-
-            <p className="font-semibold">
-              {`Here are a few technologies I've been working with recently:`}
-            </p>
+            <p className="my-3">Intermediate from Patna Collegiate School </p>
+            <p className="my-3">Matriculation from HS Bedauli, Patna </p>
           </div>
         </motion.div>
       </div>

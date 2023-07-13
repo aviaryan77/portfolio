@@ -48,7 +48,7 @@ const ProjectCard: FunctionComponent<{
         className="cursor-pointer"
         onClick={() => handleShowDetails(id)}
         width={300}
-        height={category?.includes('react-native') ? 600 : 150}
+        height={category?.includes('mobile-app') ? 600 : 150}
         layout="responsive"
       />
 

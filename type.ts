@@ -29,7 +29,7 @@ export type Category =
   | 'node'
   | 'express'
   | 'mongo'
-  | 'next'
+  | 'next js'
   | 'mobile-app'
   | 'web-app'
   | 'react-native';

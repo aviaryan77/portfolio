@@ -46,7 +46,7 @@ const Navbar = () => {
         <NavItem
           activeItem={activeItem}
           setActiveItem={setActiveItem}
-          name="Resume"
+          name="Work Experience"
           route="/resume"
         />
       </div>
