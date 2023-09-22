@@ -25,8 +25,8 @@ const resume = () => {
               I have worked with
             </h5>
 
-            <li className="my-2 text-x font-bold ">QTOPIA [June 2023 - Present]</li>
-            <li className="my-2 text-x font-bold ">SPLITKARO [June 2022 - Apr 2023]</li>
+            <li className="my-2 text-x font-bold ">QTOPIA [June 2023 - Present, Consultant]</li>
+            <li className="my-2 text-x font-bold ">SPLITKARO [June 2022 - Present]</li>
             <li className="my-2 text-x font-bold ">DESIGNS.CODES [May 2021 - May 2022]</li>
             <li className="my-2 text-x font-bold ">Twigo Technology PVT LTD [Jan 2020 - May 2021]</li>
 
