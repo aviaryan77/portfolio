@@ -63,7 +63,7 @@ export const services: IService[] = [
 export const languages: ISkill[] = [
   { name: 'JavaScript', level: '70%', Icon: IoLogoJavascript },
   { name: 'HTML & CSS', level: '75%', Icon: AiFillHtml5 },
-  { name: 'TypeScript', level: '35%', Icon: SiTypescript },
+  { name: 'TypeScript', level: '65%', Icon: SiTypescript },
   { name: 'React Native', level: '90%', Icon: MdDeveloperMode },
   { name: 'React, Redux, Hooks', level: '80%', Icon: SiReact },
   { name: 'Bootstrap', level: '58%', Icon: SiBootstrap },

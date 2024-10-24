@@ -1,4 +1,5 @@
 import { AiFillGithub } from '@react-icons/all-files/ai/AiFillGithub';
+import { FaStackOverflow } from '@react-icons/all-files/fa/FaStackOverflow';
 import { AiFillLinkedin } from '@react-icons/all-files/ai/AiFillLinkedin';
 import { AiOutlineTwitter } from '@react-icons/all-files/ai/AiOutlineTwitter';
 import { GoLocation } from '@react-icons/all-files/go/GoLocation';
@@ -44,6 +45,9 @@ const Sidebar = () => {
         </a>
         <a href="https://github.com/aviaryan77" target='_blank' rel="noreferrer">
           <AiFillGithub className="w-8 h-8 cursor-pointer" />
+        </a>
+        <a href="https://stackoverflow.com/users/15355937/avinash-aryan" target='_blank' rel="noreferrer">
+          <FaStackOverflow className="w-8 h-8 cursor-pointer" />
         </a>
         <a href="https://www.linkedin.com/in/avinash-aryan/" target='_blank' rel="noreferrer">
           <AiFillLinkedin className="w-8 h-8 cursor-pointer" />
