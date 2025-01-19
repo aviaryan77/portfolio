@@ -7,22 +7,38 @@ import { GiTie } from '@react-icons/all-files/gi/GiTie';
 import { useTheme } from 'next-themes';
 import Image from 'next/image';
 import React from 'react';
+import Lottie from 'react-lottie';
+import * as animationData from './profileLottie.json'
 
 const Sidebar = () => {
   const { theme, setTheme } = useTheme();
+  const defaultOptions = {
+    loop: true,
+    autoplay: true, 
+    animationData: animationData,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice'
+    }
+  };
 
   const changeTheme = () => setTheme(theme === 'light' ? 'dark' : 'light');
   return (
     <div>
-      <div className="items-center justify-center w-32 h-32 mx-auto overflow-hidden rounded-full ">
-        <Image
+      <div className="items-center justify-center w-32 h-32 mx-auto overflow-hidden rounded-full">
+        {/* <Image
           width={128}
           height={128}
           objectFit="cover"
           layout="intrinsic"
           alt="profile avatar"
           src="/images/profile.png"
-        />
+        /> */}
+         <Lottie options={defaultOptions}
+              height={128}
+              width={128}
+              // isStopped={this.state.isStopped}
+              // isPaused={this.state.isPaused}
+              />
       </div>
 
       <h1 className="my-4 text-3xl font-medium tracking-wider font-kaushan">
