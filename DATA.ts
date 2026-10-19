@@ -1,100 +1,245 @@
-import { RiComputerLine } from '@react-icons/all-files/ri/RiComputerLine';
-import { FaServer } from '@react-icons/all-files/fa/FaServer';
-import { AiOutlineAntDesign } from '@react-icons/all-files/ai/AiOutlineAntDesign';
-import { AiOutlineApi } from '@react-icons/all-files/ai/AiOutlineApi';
-import { MdDeveloperMode } from '@react-icons/all-files/md/MdDeveloperMode';
-import { BsCircleFill } from '@react-icons/all-files/bs/BsCircleFill';
-import { TiCodeOutline } from '@react-icons/all-files/ti/TiCodeOutline';
-// import { MdOutlineFindInPage } from '@react-icons/all-files/md/MdOutlineFindInPage';
-import { AiFillFund } from '@react-icons/all-files/ai/AiFillFund';
-import { CgFigma } from '@react-icons/all-files/cg/CgFigma';
-import { SiGooglecloud } from '@react-icons/all-files/si/SiGooglecloud';
-import { SiSlack } from '@react-icons/all-files/si/SiSlack';
-import { SiGithub } from '@react-icons/all-files/si/SiGithub';
-import { SiNextDotJs } from '@react-icons/all-files/si/SiNextDotJs';
-import { SiTypescript } from '@react-icons/all-files/si/SiTypescript';
-import { SiBootstrap } from '@react-icons/all-files/si/SiBootstrap';
-import { SiReact } from '@react-icons/all-files/si/SiReact';
-import { CgFramer } from '@react-icons/all-files/cg/CgFramer';
-import { AiFillHtml5 } from '@react-icons/all-files/ai/AiFillHtml5';
-import { IoLogoJavascript } from '@react-icons/all-files/io/IoLogoJavascript';
-import { IoLogoNodejs } from '@react-icons/all-files/io/IoLogoNodejs';
-import { Category, IProject, IService, ISkill } from './type';
+import {
+  IExperience,
+  ILink,
+  IProject,
+  ISkillGroup,
+  IStat,
+} from './type';
 
-export const services: IService[] = [
+// Source of truth: context/resume.md (dates and numbers must match it).
+
+export const SITE_URL = 'https://aviaryan.vercel.app';
+export const RESUME_PDF = '/Avinash_Aryan_Resume.pdf';
+
+export const profile = {
+  name: 'Avinash Aryan',
+  title: 'Lead Mobile App Engineer',
+  stack: 'React Native, Expo, Next.js, TypeScript',
+  location: 'Patna, India',
+  email: 'aviaryan77@gmail.com',
+  /** WhatsApp chat link; the number itself is not printed on the page. */
+  whatsapp: 'https://wa.me/919431210691',
+  kicker: 'Lead Mobile App Engineer · Patna, India · Open to remote roles',
+  headline: 'I build mobile and web apps that people use every day.',
+  pitch:
+    "5+ years shipping React Native, Expo, Next.js and TypeScript apps, with a focus on polished UI and smooth animations. For 4+ years I've led mobile development at Splitkaro.",
+  summary:
+    'Lead Mobile App Engineer with 5+ years building cross-platform apps for iOS, Android and web with React Native, Next.js and TypeScript. Led mobile at Splitkaro (100K+ downloads, 90,000+ active groups). Founder of Lybi.in.',
+};
+
+export const socials: (ILink & { id: string })[] = [
+  { id: 'linkedin', label: 'LinkedIn', href: 'https://www.linkedin.com/in/avinash-aryan/' },
+  { id: 'github', label: 'GitHub', href: 'https://github.com/aviaryan77' },
+  { id: 'twitter', label: 'X / Twitter', href: 'https://twitter.com/avi_aryan_' },
   {
-    Icon: RiComputerLine,
-    title: 'Frontend Development',
-    about:
-      'I can build a beautiful and scalable SPA using <b> HTML</b>,<b>CSS</b> and <b>React.js</b>. I have hand on experience working with <b> Tailwind CSS, Chakra UI, Bootstrap ReactStrap </b> etc...',
-  },
-  {
-    Icon: AiFillFund,
-    title: 'SEO',
-    about:
-      ' With help of <b>NEXT Js</b> features, websites not only look stunning but also have high performance and good SEO score on all devices. Most of the project website have 90-100 score',
-  },
-  {
-    Icon: AiOutlineApi,
-    title: 'API Integration',
-    about:
-      'I can connect REST API with Front-end technologies. For Mobile Technologies I can connect the Core mobile api like camera, GPS, mic, etc..',
-  },
-  {
-    Icon: MdDeveloperMode,
-    title: 'Mobile App Development',
-    about:
-      'Build and deploy pixel perfect mobile app with <b>React Native</b>  and <b>Animated API</b> for both iOS and Android',
-  },
-  {
-    Icon: AiOutlineAntDesign,
-    title: 'UI/Graphic designer',
-    about:
-      'Stunning user interface designer using <b>Figma</b> ,<b>Canva</b>  and  <b>Framer</b> ',
-  },
-  {
-    Icon: TiCodeOutline,
-    title: 'Code review and refactoring',
-    about:
-      'I focus on clean and manageable code, scalability & reusability of components, integrate market leading tools and technologies',
+    id: 'stackoverflow',
+    label: 'Stack Overflow',
+    href: 'https://stackoverflow.com/users/15355937/avinash-aryan',
   },
 ];
 
-export const languages: ISkill[] = [
-  { name: 'JavaScript', level: '70%', Icon: IoLogoJavascript },
-  { name: 'HTML & CSS', level: '75%', Icon: AiFillHtml5 },
-  { name: 'TypeScript', level: '65%', Icon: SiTypescript },
-  { name: 'React Native', level: '90%', Icon: MdDeveloperMode },
-  { name: 'React, Redux, Hooks', level: '80%', Icon: SiReact },
-  { name: 'Bootstrap', level: '58%', Icon: SiBootstrap },
-  { name: 'Next JS', level: '80%', Icon: SiNextDotJs },
-  { name: 'Node', level: '25%', Icon: IoLogoNodejs },
+export const stats: IStat[] = [
+  { value: '100K+', label: 'Splitkaro downloads on Google Play' },
+  { value: '90,000+', label: 'Active groups in 2026' },
+  { value: '₹93 Cr+', label: 'Settled through the app in 2026' },
+  { value: '4.4★', label: 'From 9K+ Play Store reviews' },
 ];
 
-export const projectNavBars: Category[] | string[] = [
-  'all',
-  'mobile-app',
-  'web-app',
-  'react',
-  'react-native',
-  'next js',
-  'node',
-  'express',
-  'mongo',
+export const experience: IExperience[] = [
+  {
+    company: 'Splitkaro',
+    title: 'Lead Mobile App Developer',
+    period: 'Jun 2022 – Present',
+    location: 'Remote',
+    summary:
+      'Lead mobile development of the React Native + TypeScript app across Android, iOS and web.',
+    highlights: [
+      "Lead mobile development of Splitkaro's React Native + TypeScript app across Android, iOS and web: 100K+ downloads, 4.4-star rating from 9K+ Google Play reviews",
+      'Built real-time group expense tracking with Firebase, powering 90,000+ active groups and ₹93 crore+ in settlements in 2026',
+      'Built automatic expense capture from bank SMS, card and bank PDF statements, UPI apps and receipt scanning',
+      'Shipped item-wise bill splitting, smart settle-up reminders and one-tap Splitwise balance import',
+      'Built analytics dashboards with category-wise spending insights and monthly summaries',
+      'Improved retention through UX optimisation and Reanimated animations',
+    ],
+    projectIds: ['splitkaro-app', 'splitkaro-website'],
+  },
+  {
+    company: 'designs.codes',
+    title: 'React Native Developer',
+    period: 'May 2021 – Jun 2022',
+    location: 'Remote',
+    highlights: [
+      'Built a ride-sharing app (Peer Dispatch) in React Native with separate driver and passenger apps',
+      'Implemented real-time booking and live tracking over WebSockets',
+      'Added push notifications and Redux-based state management',
+      'Built offline sync using Redux Persist',
+    ],
+    projectIds: ['peer-dispatch'],
+  },
+  {
+    company: 'Twigo Technology Pvt Ltd',
+    period: 'Jan 2020 – May 2021',
+    highlights: [],
+  },
 ];
 
-export const tools: ISkill[] = [
-  { name: 'Figma & XD', level: '50%', Icon: CgFigma },
-  { name: 'Google Cloud Platform', level: '80%', Icon: SiGooglecloud },
-  { name: 'Slack,Trello, HubStaff', level: '90%', Icon: SiSlack },
-  { name: 'Git', level: '75%', Icon: SiGithub },
-  { name: 'Framer Motion & Animated API', level: '70%', Icon: CgFramer },
+export const skills: ISkillGroup[] = [
+  {
+    title: 'Mobile',
+    items: ['React Native', 'Expo', 'iOS', 'Android', 'Reanimated', 'Lottie', 'Push notifications', 'Offline-first sync'],
+  },
+  {
+    title: 'Frontend',
+    items: ['React', 'Next.js', 'TypeScript', 'JavaScript (ES6+)', 'HTML5', 'CSS3', 'Tailwind CSS', 'Chakra UI', 'Bootstrap', 'Framer Motion'],
+  },
+  {
+    title: 'State & data',
+    items: ['Redux', 'Redux-Saga', 'Redux Persist', 'React Query', 'REST APIs', 'GraphQL', 'WebSockets'],
+  },
+  {
+    title: 'Backend & cloud',
+    items: ['Node.js', 'Express.js', 'Firebase', 'MongoDB', 'AWS', 'GCP', 'NextAuth', 'JWT', 'Razorpay', 'RBAC'],
+  },
+  {
+    title: 'Tools',
+    items: ['Git', 'GitHub', 'Postman', 'Vercel', 'Claude Code', 'Figma', 'Adobe XD', 'Slack', 'Trello', 'HubStaff'],
+  },
+];
+
+export const education = {
+  degree: 'B.Tech, Electrical Engineering',
+  school: 'Malaviya National Institute of Technology (MNIT) Jaipur',
+  period: '2015 – 2019',
+  notes: [
+    'Cleared JEE Main and JEE Advanced in 2015',
+    'Intermediate from Patna Collegiate School',
+    'Matriculation from HS Bedauli, Patna',
+  ],
+};
+
+export const certifications = [
+  'Claude Code in Action',
+  'React Native – The Practical Guide',
+  'React Native Expo for Multiplatform Mobile App Development',
+];
+
+export const about = [
+  "I studied Electrical Engineering at NIT Jaipur (2015 – 2019) and started building for the web there, at 19. I've built cross-platform mobile apps with React Native since 2020.",
+  "I enjoy the space where engineering meets product: fast execution, polished UI, and features people actually use. Outside work, I'm building Lybi.in to bring library discovery and booking online for students in smaller cities.",
 ];
 
 export const projects: IProject[] = [
   {
-    id: '16',
+    id: 'lybi',
+    name: 'Lybi.in',
+    role: 'Founder & Product Engineer',
+    period: 'Aug 2025 – Present',
+    summary: 'Library discovery and seat booking for students in Tier-2 and Tier-3 cities.',
+    description: [
+      'A platform where students discover and book library seats, and library owners manage their spaces, aimed at Tier-2 and Tier-3 cities.',
+    ],
+    highlights: [
+      'Designed the end-to-end frontend architecture with Next.js and React Native',
+      'Built daily and monthly seat-booking views and role-based auth for students and library owners',
+      'Built Redux-Saga dashboards handling high-volume booking data',
+    ],
+    featuredImage: '/images/lybi/desktop.jpg',
+    imageArray: ['/images/lybi/desktop.jpg', '/images/lybi/mobile-home.jpg'],
+    imageShape: 'wide',
+    links: [{ label: 'Visit lybi.in', href: 'https://lybi.in' }],
+    category: ['next js', 'react', 'react-native', 'web-app', 'mobile-app'],
+    key_techs: ['Next.js', 'React Native', 'Redux-Saga', 'RBAC'],
+  },
+  {
+    id: 'splitkaro-app',
+    name: 'Splitkaro App',
+    role: 'Lead Mobile App Developer',
+    period: 'Jun 2022 – Present',
+    summary: 'Group expense manager and payments app for India. 100K+ downloads.',
+    description: [
+      "Splitkaro is India's first group expense manager and group payments app. It aims to change how people spend together, and is built for the Indian market.",
+      'Who uses it: friends, flatmates, travel buddies, colleagues, hostel mates, partners, families, co-living and roommates.',
+    ],
+    sections: [
+      {
+        title: 'Why people use it',
+        items: [
+          'Save money and time',
+          'Keep track of group spending',
+          'Control money outflow',
+          'Keep relationships with friends healthy',
+          'Improve spending habits',
+          'Get money back from friends on time',
+          'No manual calculations',
+          'Trip budget planner',
+        ],
+      },
+      {
+        title: 'What sets it apart',
+        items: [
+          'Free to use',
+          'Intelligent, automated expense reminders',
+          'One tap to fetch bills from order history',
+          'Pay-per-use with item-wise splitting',
+          'Built-in expense calculator',
+          'Auto expense tracker',
+          'Settle bills by priority',
+          'Safe in-app payments',
+          'Easy bill management',
+        ],
+      },
+      {
+        title: 'Features',
+        items: [
+          'Split equally, unequally or item-wise',
+          'Item-wise splitting by what each person consumed',
+          'Import food and grocery bills from Swiggy, Zomato, BigBasket and Swiggy Instamart',
+          'Collections to group related bills',
+          'Instant Bills to prioritise an expense and get paid on time',
+          'Automatic reminders sent to friends on your behalf',
+          'Groups for people you spend with regularly, with member-wise tracking',
+          'UPI payments via PhonePe, Google Pay, WhatsApp, BHIM UPI and Paytm',
+          'Home bills manager for recurring rent, electricity, broadband and subscriptions',
+          'Import existing balances from Splitwise and other apps',
+        ],
+      },
+    ],
+    quotes: [
+      'The app has a refreshing, cool, easy on the eyes interface with a strong focus on customer experience and navigation.',
+      "The onboarding, payment flow, and user experience are smooth. Using it the next time I'm going for a trip with friends.",
+      "I'd call this amazing feature 'Splitting on Autopilot'.",
+    ],
+    featuredImage: '/images/splitkaro-app/bill-split.webp',
+    imageArray: [
+      '/images/splitkaro-app/events.webp',
+      '/images/splitkaro-app/bill-split.webp',
+      '/images/splitkaro-app/settlements.webp',
+      '/images/splitkaro-app/vendors.webp',
+    ],
+    imageShape: 'phone',
+    links: [
+      {
+        label: 'Google Play',
+        href: 'https://play.google.com/store/apps/details?id=com.bsquare.splitkaro',
+      },
+      { label: 'splitkaro.com', href: 'https://www.splitkaro.com' },
+    ],
+    category: ['react-native', 'mobile-app'],
+    key_techs: [
+      'React Native', 'TypeScript', 'Jotai', 'Decentro', 'UPI payments', 'Moment.js',
+      'Reanimated', 'Animated API', 'Firebase', 'MoEngage', 'WebView', 'react-native-share',
+      'Gifted Charts', 'CodePush', 'Mixpanel', 'Lottie', 'App Center Analytics', 'Push notifications',
+    ],
+  },
+  {
+    id: 'splitkaro-website',
     name: 'Splitkaro Website',
+    role: 'Lead Mobile App Developer',
+    summary: 'Marketing website for Splitkaro, built with Next.js.',
+    description: [
+      "Splitkaro's vision is a world where social spending is fair and seamless, however people choose to pay, making money between friends and family easier to handle.",
+      'The platform simplifies paying with friends, removes the awkwardness of asking for money, and lets people settle debts on the go.',
+    ],
     featuredImage: '/images/splitkaro-website/hero.webp',
     imageArray: [
       '/images/splitkaro-website/hero.webp',
@@ -103,56 +248,26 @@ export const projects: IProject[] = [
       '/images/splitkaro-website/rent.webp',
       '/images/splitkaro-website/product.webp',
     ],
-    deployed_url:
-      'https://play.google.com/store/apps/details?id=com.bsquare.splitkaro&hl=en_IN&gl=US',
-    github_url: null,
-    category: ['react', 'web-app', 'next js' ],
-    description: `<h2 class="framer-text" style="--font-selector: R0Y7SW50ZXItcmVndWxhcg==; --framer-font-family: &quot;Inter&quot;, &quot;Inter Placeholder&quot;, sans-serif; --framer-font-size: 20px; --framer-letter-spacing: -0.7px; --framer-line-height: 1.5em; --framer-text-alignment: center; --framer-text-color: var(--token-1021654d-251a-4750-952b-de3f7005260e, rgb(136, 136, 136));">At Splitkaro, our vision is to create a world where social spending is fair and seamless, regardless of how people choose to pay. We want to transform how people handle money between friends and family, making it easier and more convenient for everyone.<br class="framer-text"><br class="framer-text">Our goal is to provide a platform that simplifies the process of paying with friends, removes the awkwardness of asking for money, and allows people to settle debts on the go. We believe that this will create stronger, more honest relationships and help people avoid the pitfalls that often come with sharing expenses.<br class="framer-text"><br class="framer-text">With Splitkaro, our hope is to empower people to spend time with their loved ones without worrying about the financial logistics. We are committed to innovation, excellence, and customer satisfaction, and we believe that our vision will have a significant impact in the lives of people across India and beyond.</h2>
-  `,
-    key_techs: ['React', 'Next JS', 'AOS', 'Framer-motion', 'Moment JS', 'React-icons', 'Chakra UI', 'Firebase', ],
+    imageShape: 'wide',
+    links: [{ label: 'splitkaro.com', href: 'https://www.splitkaro.com' }],
+    category: ['react', 'web-app', 'next js'],
+    key_techs: ['React', 'Next.js', 'AOS', 'Framer Motion', 'Moment.js', 'React Icons', 'Chakra UI', 'Firebase'],
   },
   {
-    id: '15',
-    name: 'Splitkaro App',
-    featuredImage: '/images/splitkaro-app/bill-split.webp',
-    imageArray: [
-      '/images/splitkaro-app/events.webp',
-      '/images/splitkaro-app/bill-split.webp',
-      '/images/splitkaro-app/settlements.webp',
-      '/images/splitkaro-app/vendors.webp',
+    id: 'qtopia-app',
+    name: 'Qtopia App',
+    role: 'Freelance Frontend Consultant',
+    period: 'Jun 2023 – Dec 2024',
+    summary: 'EdTech quiz app: live quizzes, themed quizzes and 1v1 challenges.',
+    description: [
+      'A quiz app with live quizzes, themed quizzes, 1v1 challenges and more, plus content for learning new facts across many subjects.',
     ],
-    deployed_url:
-      'https://play.google.com/store/apps/details?id=com.bsquare.splitkaro&hl=en_IN&gl=US',
-    github_url: null,
-    category: ['react-native', 'mobile-app', ],
-    description: `<div>Splitkaro is India's first group expense manager and group payments solution provider that aims to transform how people spend together. It specialises in the Indian market 🇮🇳 and is made in India, with love! ♥️<br><br>💫 Who should use Splitkaro?<br>People in India who spend with:<br>Friends 👯‍♂️, flatmates 👥, travel buddies 🪂, co-workers/colleagues 🧑‍💻, hostel mates 🧑‍🏫, partner 👩‍❤️‍👨, family 👨‍👩‍👧‍👦, co-living 🛌, roommates 🤼<br><br>💫 Why should you use Splitkaro?<br>- Save money 💸 and time ⏱️<br>- Keep track of your group spending 💰<br>- Control your money outflow 🤑<br>- Keep relationships with friends healthy 👬🏻<br>- Improve your spending habits 💎<br>- Deal with the social stigma of appearing unfriendly/being labeled kanjus 🤩<br>- Get money from friends on time ⌛<br>- Say bye to calculations 🧮<br>- No tension of chillr 🏧<br>- Trip budget planner 🛄<br><br>💫 Key Market Differentiators<br>- It’s Free 🆓<br>- Intelligent and Automated expense reminder system 🤖<br>- Single Tap to fetch your bills from Order History 🍕🍔🍬<br>- Pay-per-use with item-wise splitting 🧾<br>- Inbuilt expense calculator 📟<br>- Auto Expense Tracker 🛤️<br>- Settle Bills as per set Priority 😎<br>- In-App Safe and Secure Payments 🔐<br>- Easy bill management 🧑‍💼<br>- Manage personal finance 💹*<br>- Home setup 🏡*<br>- Home budget planner 💲*<br><br>💫 Our Industry-Leading Features<br>- Split wisely as per your requirement- equally, unequally, or item-wise 🥮.<br>- Item-wise splitting allows splitting bills as per the items consumed by each individual 🍜. <br>- Import online food 🧋🍟🍰🍭 and grocery 🧅🍉 bills from your order history of different vendors like Swiggy, Zomato, Big Basket, and Swiggy Instamart.<br>- Create a collection to add related bills together. They act as a basic bills manager 👔.<br>- Prioritize an expense and get money on time with Instant Bills 🗓️.<br>- An intelligent reminder system sends automatic reminders to friends on your behalf 🤖<br>- Form groups with people you spend with regularly 💑- .<br>- Track your group expenses member-wise 📝.<br>- Pay friends you owe money to with UPI Payments via PhonePe, Google Pay, WhatsApp, Bhim UPI, Paytm, etc 📲 <br>- Set Up your home and live hassle-free forever with our home bills manager. - - It auto pays all your monthly recurring household bills like rent 🏘️, electricity 💡, BroadBand 🌐, Netflix/Hotstar/Amazon Prime subscription 📽️, etc.*<br>- Import existing balances from other apps like Splitwise, Walnut, YNAB, etc ☑️* <br><br>💫 What our Customers have to say:<br># “The app has a refreshing, cool, easy on the eyes interface with a strong focus on customer experience and navigation.”<br># “The onboarding, payment flow, and user experience are smooth. Using it the next time I'm going for a trip with friends.”<br># “I’d call this amazing feature ‘Splitting on Autopilot’ since instead of going through the hassle of finding a paper, drawing several columns, writing down each item’s bill according to the assignees, and then adding them up, you can rely on Splitkaro to do it for you automatically.”<br><br>💫 Why Splitkaro needs the following permission:<br># READ CONTACTS<br>We identify your friends with their contact numbers. Contact number is used to make UPI payments. Also, your balances and payments are tracked against these contact numbers.<br><br>We would love to understand how you liked our App. For any feedback, requests, questions, or concerns, reach us at support@splitkaro.com<br><br>* Upcoming features</div>
-  `,
-    key_techs: ['React-Native', 'Jotai', 'Decentro', 'UPI payment', 'Moment JS', 'React-native-reanimated', 'Animated API', 'Firebase', 'react-native-moengage', 'react-native-webview','react-native-share', 'react-native-gifted-charts','react-native-code-push','mixpanel-react-native', 'lottie' , 'appcenter-analytics', 'react-native-push-notification'],
-  },
-  {
-    id: '14',
-    name: 'Picmate',
-    featuredImage: '/images/picmate/hero.webp',
-    imageArray: [
-      '/images/picmate/dashboard.webp',
-      '/images/picmate/hero.webp',
-      '/images/picmate/styles.webp',
-      '/images/picmate/styles_female.webp',
-      '/images/picmate/pricing.webp',
-      '/images/picmate/testimonials.webp',
+    highlights: [
+      'Led frontend development for the Next.js web platform and the React Native app',
+      'Built AI-powered question generation with image scanning',
+      'Implemented role-based access control for students and teachers',
+      'Improved quiz completion rates by optimising event subscriptions',
     ],
-    deployed_url: 'https://picmate.ai',
-    github_url: null,
-    category: ['react', 'web-app'],
-    description: `Picmate uses ai AI model that turns ordinary photos into captivating profile pictures, increasing engagement, shares and likes,
-    offer 50+ styles for males and females 
-
-  `,
-    key_techs: ['React', 'Chakra-UI', 'Stripe Payment', 'Rewardful API'],
-  },
-  {
-    id: '13',
-    name: 'Qtopia app',
     featuredImage: '/images/qtopia-app/dashboard.webp',
     imageArray: [
       '/images/qtopia-app/dashboard.webp',
@@ -161,25 +276,18 @@ export const projects: IProject[] = [
       '/images/qtopia-app/score.webp',
       '/images/qtopia-app/leaderboard.webp',
     ],
-    deployed_url:
-      'https://play.google.com/store/apps/details?id=com.qtopiaandroid',
-    github_url: null,
+    imageShape: 'phone',
+    links: [],
     category: ['mobile-app', 'react-native'],
-    description: `<div>Are you a trivia buff looking for a fun and engaging way to test your knowledge? Look no further than Qtopia! Our app features a wide range of quiz formats to suit every taste, including live quizzes, themed quizzes, 1v1 challenges, and more.<br><br>But that's not all - Qtopia is also a great place to learn new facts and expand your knowledge. With a wealth of interesting and informative content on a variety of subjects, you're sure to come away from each quiz with new insights and information.<br><br>Whether you're a casual player or a die-hard quiz enthusiast, QuizMaster is the perfect choice for anyone who loves to learn and have fun. So why wait? Download Qtopia today and start playing!</div>
-  `,
-    key_techs: [
-      'React-native',
-      'Redux',
-      'Redux-saga',
-      'Redux-persist',
-      'Firebase',
-      'OTA-update',
-      'moment js',
-    ],
+    key_techs: ['React Native', 'Redux', 'Redux-Saga', 'Redux Persist', 'Firebase', 'OTA updates', 'Moment.js'],
   },
   {
-    id: '12',
-    name: 'Qtopia website',
+    id: 'qtopia-website',
+    name: 'Qtopia Website',
+    role: 'Freelance Frontend Consultant',
+    period: 'Jun 2023 – Dec 2024',
+    summary: 'Landing pages for the Qtopia quiz platform, built from scratch.',
+    highlights: ['Built new landing pages from scratch'],
     featuredImage: '/images/qtopia-website/hero.webp',
     imageArray: [
       '/images/qtopia-website/hero.webp',
@@ -189,19 +297,30 @@ export const projects: IProject[] = [
       '/images/qtopia-website/mobile-hero.webp',
       '/images/qtopia-website/drawer.webp',
     ],
-    deployed_url: 'https://qtopia.in/',
-    github_url: null,
+    imageShape: 'wide',
+    links: [],
     category: ['next js', 'react', 'web-app'],
-    description: `<b>Realmoney quiz trivia app</b> 
-     <li> Developed brand new landing pages with scratch
-    </li>
-  `,
-    key_techs: ['NEXT JS', 'chakra-ui', 'moment js'],
+    key_techs: ['Next.js', 'Chakra UI', 'Moment.js'],
   },
   {
-    id: '11',
+    id: 'peer-dispatch',
     name: 'Peer Dispatch',
-    featuredImage: '/images/peerdispatch/account.webp',
+    role: 'React Native Developer · designs.codes',
+    period: 'May 2021 – Jun 2022',
+    summary: 'Ride-sharing and delivery app with separate driver and passenger flows.',
+    description: ['A cross-platform taxi app for ride sharing and delivery, built in bare React Native.'],
+    highlights: [
+      'Built driver and passenger screens in a single app, with data persisted locally',
+      'Real-time booking and live tracking, broadcasting over socket.io to many drivers and clients at once',
+      'In-app chat between driver and client, plus an assistant chat',
+      'Firebase push notifications and toast messages for in-app notifications',
+      'State management with Redux, Redux-Saga and Redux Persist',
+      'Centralised API helpers to control and debug API calls',
+      'Google Maps, animations, modals, validated forms and star-rating feedback',
+      'Reusable components, tuned for performance across many iOS and Android devices',
+      'Tested and debugged with redux-logger and react-native-debugger',
+    ],
+    featuredImage: '/images/peerdispatch/passenger.webp',
     imageArray: [
       '/images/peerdispatch/account.webp',
       '/images/peerdispatch/login.webp',
@@ -216,84 +335,60 @@ export const projects: IProject[] = [
       '/images/peerdispatch/rating.webp',
       '/images/peerdispatch/deliveryDetails.webp',
     ],
-    deployed_url:
-      'https://xd.adobe.com/view/eeb082a2-b9e1-42af-b8a1-06788791d2a3-bbe3/screen/4ef8765b-e3e7-4177-a441-0fafbca2e4c3/',
-    github_url: null,
+    imageShape: 'phone',
+    links: [
+      {
+        label: 'Design prototype',
+        href: 'https://xd.adobe.com/view/eeb082a2-b9e1-42af-b8a1-06788791d2a3-bbe3/screen/4ef8765b-e3e7-4177-a441-0fafbca2e4c3/',
+      },
+    ],
     category: ['express', 'react-native', 'node', 'mobile-app', 'mongo'],
-    description: `<b>Ride Sharing + Delivery App: Bare react native</b> 
-
-     <li> Developed bare react native, cross-platform user-facing taxi app for delivery and ride
-      sharing
-      </li>
-      
-      <li> Designed and build modern user interfaces to enhance application performance
-      </li>
-      <li> Build reusable components and front-end libraries for future use.
-      </li>
-      <li> Optimized components for maximum performance across a number of iOS and android
-      devices </li>
-      <li> State management using Redux. Redux-persist with saga middlewares</li>
-      <li>Centralized API helpers to control and debug API calls</li>
-     <li>Added Logic to use Client and Driver screens in a single app with persisting data locally
-      </li>
-      <li>Used modern packages for advance features to use in Google maps, smooth animations,
-     </li>
-     <li>beautiful modals, validated forms, star rated feedback and other components
-     </li>
-
-     <li> Broadcasted data with help of socket.io to use in multiple driver and multiple clients
-      screens simultaneously
-      </li>
-      <li>Added in-app chat features to Driver-client chat and Assistant chat
-      </li>
-      <li>For user engagement implemented firebase push notifications and toast messages for in-app notification
-      </li>
-      <li>Tested and Debugged using redux-logger, react-native-debugger with added colors and
-      </li>
-  `,
-
     key_techs: [
-      'express ',
-      'react-native',
-      'node',
-      'mongo',
-      'Google Map',
-      'Google Cloud Platform',
-      'Fb-sdk',
-      'redux',
-      'redux-saga',
-      'formik',
-      'redux-persist',
-      'socket.io',
-      'Toast-message',
-      'react-native-animatable',
-      'moment js',
-      'react-native-sound',
-      'apple authentication',
-      'twilio conversations',
-      'firebase push notifications',
+      'React Native', 'Express', 'Node', 'MongoDB', 'Google Maps', 'Google Cloud Platform',
+      'Facebook SDK', 'Redux', 'Redux-Saga', 'Formik', 'Redux Persist', 'socket.io',
+      'Toast messages', 'react-native-animatable', 'Moment.js', 'react-native-sound',
+      'Apple Sign In', 'Twilio Conversations', 'Firebase push notifications',
     ],
   },
   {
-    id: '10',
-    name: 'Bol Bihar',
-    description: 'This is blog app with admin and user roles in GRAPHQL CMS',
-    featuredImage: '/images/bol-bihar/home.webp',
+    id: 'picmate',
+    name: 'Picmate',
+    summary: 'AI profile-picture generator with 50+ styles.',
+    description: [
+      'An AI model that turns ordinary photos into eye-catching profile pictures to increase engagement, shares and likes. Offers 50+ styles for men and women.',
+    ],
+    featuredImage: '/images/picmate/hero.webp',
     imageArray: [
-      '/images/bol-bihar/home.webp',
-      '/images/bol-bihar/post.webp',
-      '/images/bol-bihar/footer.webp',
+      '/images/picmate/dashboard.webp',
+      '/images/picmate/hero.webp',
+      '/images/picmate/styles.webp',
+      '/images/picmate/styles_female.png',
+      '/images/picmate/pricing.webp',
+      '/images/picmate/testimonials.webp',
     ],
-    deployed_url: 'https://bol-bihar.vercel.app/',
-    github_url: 'https://github.com/aviaryan77/bol-bihar',
-    category: ['react', 'next js', 'web-app'],
-    key_techs: ['React', 'Next JS', 'Tailwind CSS', 'Graph QL', 'GraphQL CMS'],
+    imageShape: 'wide',
+    links: [],
+    category: ['react', 'web-app'],
+    key_techs: ['React', 'Chakra UI', 'Stripe', 'Rewardful API'],
   },
   {
-    id: '9',
+    id: 'bol-bihar',
+    name: 'Bol Bihar',
+    summary: 'Blog with admin and user roles on a GraphQL CMS.',
+    featuredImage: '/images/bol-bihar/home.webp',
+    imageArray: ['/images/bol-bihar/home.webp', '/images/bol-bihar/post.webp', '/images/bol-bihar/footer.webp'],
+    imageShape: 'wide',
+    links: [
+      { label: 'Live site', href: 'https://bol-bihar.vercel.app/' },
+      { label: 'GitHub', href: 'https://github.com/aviaryan77/bol-bihar' },
+    ],
+    category: ['react', 'next js', 'web-app'],
+    key_techs: ['React', 'Next.js', 'Tailwind CSS', 'GraphQL', 'GraphQL CMS'],
+  },
+  {
+    id: 'twigo-shopee',
     name: 'Twigo Shopee',
-    description:
-      'A complete MERN stack E-commerce android application with Mongo DB and express',
+    summary: 'MERN-stack e-commerce Android app with MongoDB and Express.',
     featuredImage: '/images/twigo-shopee/product.jpeg',
     imageArray: [
       '/images/twigo-shopee/product.jpeg',
@@ -302,23 +397,15 @@ export const projects: IProject[] = [
       '/images/twigo-shopee/login.jpeg',
       '/images/twigo-shopee/search.jpeg',
     ],
-    deployed_url:
-      'https://play.google.com/store/apps/details?id=com.twigo.shopee&hl=en&gl=in',
-    github_url: null,
+    imageShape: 'phone',
+    links: [],
     category: ['react-native', 'mongo', 'express', 'mobile-app', 'node'],
-    key_techs: [
-      'React-native',
-      'Mongo DB',
-      'expo',
-      'Redux',
-      'Redux-thunk',
-      'express',
-      'jwt',
-    ],
+    key_techs: ['React Native', 'MongoDB', 'Expo', 'Redux', 'Redux Thunk', 'Express', 'JWT'],
   },
   {
-    id: '8',
+    id: 'bindu-bhai',
     name: 'Bindu Bhai',
+    summary: 'Responsive, multi-language lawyer website built with Next.js.',
     featuredImage: '/images/bindu-bhai/home.webp',
     imageArray: [
       '/images/bindu-bhai/home.webp',
@@ -326,43 +413,37 @@ export const projects: IProject[] = [
       '/images/bindu-bhai/contact.webp',
       '/images/bindu-bhai/about.webp',
     ],
-    deployed_url: 'https://bindubhai.com/',
-    github_url: null,
+    imageShape: 'wide',
+    links: [],
     category: ['react', 'next js', 'web-app'],
-    description:
-      'A production ready responsive dynamic lawyer website made with next JS, support multi-languages.',
-    key_techs: ['React', 'Nodemailer', 'chakra-UI', 'Framer Motion', 'formik'],
+    key_techs: ['React', 'Next.js', 'Nodemailer', 'Chakra UI', 'Framer Motion', 'Formik'],
   },
-
   {
-    id: '7',
+    id: 'chat-app',
     name: 'Realtime Chat App',
+    summary: 'Real-time one-to-one chat built with Expo and Firebase.',
     featuredImage: '/images/expoChatApp/chat.jpeg',
-    imageArray: [
-      '/images/expoChatApp/chat.jpeg',
-      '/images/expoChatApp/login.jpeg',
-    ],
-    deployed_url: null,
-    github_url: 'https://github.com/aviaryan77/firebaseChat',
+    imageArray: ['/images/expoChatApp/chat.jpeg', '/images/expoChatApp/register.jpeg'],
+    imageShape: 'phone',
+    links: [{ label: 'GitHub', href: 'https://github.com/aviaryan77/firebaseChat' }],
     category: ['react-native', 'mobile-app'],
-    description: 'Basic Realtime Chat App where one can talk to each other',
-    key_techs: ['React-native', 'expo', 'firebase'],
+    key_techs: ['React Native', 'Expo', 'Firebase'],
   },
   {
-    id: '6',
+    id: 'cryptonomy',
     name: 'Cryptonomy',
+    summary: 'Real-time crypto price tracker app.',
     featuredImage: '/images/crypto/crypto2.webp',
     imageArray: ['/images/crypto/crypto2.webp', '/images/crypto/crypto.webp'],
-    deployed_url:
-      'https://play.google.com/store/apps/details?id=com.cryptonomy',
-    github_url: 'https://github.com/aviaryan77/Cryptonomy',
+    imageShape: 'phone',
+    links: [{ label: 'GitHub', href: 'https://github.com/aviaryan77/Cryptonomy' }],
     category: ['react-native', 'mobile-app'],
-    description: 'Cryptonomy is a real-time crypto price tracker app.',
-    key_techs: ['React-native', 'gifted-chat', 'TypeScript', 'admob', 'crypto'],
+    key_techs: ['React Native', 'Gifted Chat', 'TypeScript', 'AdMob'],
   },
   {
-    id: '5',
+    id: 'hylog',
     name: 'Hylog',
+    summary: 'Social chat and discussion app built with React Native and Firebase.',
     featuredImage: '/images/hylog/hy1.webp',
     imageArray: [
       '/images/hylog/hy1.webp',
@@ -372,31 +453,18 @@ export const projects: IProject[] = [
       '/images/hylog/hy5.webp',
       '/images/hylog/hy6.webp',
     ],
-    deployed_url: null,
-    github_url: null,
+    imageShape: 'phone',
+    links: [],
     category: ['react-native', 'mobile-app'],
-    description:
-      'Hylog is a social media chat and discussion app build with react native and firebase',
-    key_techs: ['React-native', 'gifted-chat', 'admob', 'firebase'],
+    key_techs: ['React Native', 'Gifted Chat', 'AdMob', 'Firebase'],
   },
   {
-    id: '4',
-    name: 'Express Login Template',
-    featuredImage: '/images/expressAuth/login.webp',
-    imageArray: [
-      '/images/expressAuth/login.webp',
-      '/images/expressAuth/dashboard.webp',
-    ],
-    deployed_url: 'https://github.com/aviaryan77/express-login-system',
-    github_url: null,
-    category: ['node', 'express'],
-    description: 'Auth template using Node and Express',
-    key_techs: ['Node', 'Express', 'Bootstrap'],
-  },
-
-  {
-    id: '3',
+    id: 'cloud-flog',
     name: 'Cloud Flog',
+    summary: 'B2B trading community app for luxury watch dealers.',
+    description: [
+      'A B2B trading group community app for the luxury watch trade, connecting luxury watch dealers around the world to support and grow their businesses.',
+    ],
     featuredImage: '/images/cloudflog/cf.webp',
     imageArray: [
       '/images/cloudflog/cf.webp',
@@ -405,23 +473,15 @@ export const projects: IProject[] = [
       '/images/cloudflog/cf3.webp',
       '/images/cloudflog/cf4.webp',
     ],
-    deployed_url: 'https://play.google.com/store/apps/details?id=com.cloudflog',
-    github_url: null,
+    imageShape: 'phone',
+    links: [{ label: 'Google Play', href: 'https://play.google.com/store/apps/details?id=com.cloudflog' }],
     category: ['react-native', 'mobile-app'],
-    description:
-      'The Cloud Flog is the Leading B2B trading group community app for the luxury watch trade. We connect Luxury Watch Dealers around the World to support and grow their businesses.',
-    key_techs: [
-      'Firebase Auth',
-      'react-native',
-      'redux',
-      'formik',
-      'moment js',
-      'firebase push notifications',
-    ],
+    key_techs: ['React Native', 'Firebase Auth', 'Redux', 'Formik', 'Moment.js', 'Firebase push notifications'],
   },
   {
-    id: '2',
+    id: 'trip-planner',
     name: 'Trip Planner',
+    summary: 'Trip planning app built with React Native and Firebase.',
     featuredImage: '/images/tripPlanner/home.webp',
     imageArray: [
       '/images/tripPlanner/home.webp',
@@ -432,33 +492,44 @@ export const projects: IProject[] = [
       '/images/tripPlanner/docs.webp',
       '/images/tripPlanner/others.webp',
     ],
-    deployed_url: '/tripPlanner/Userflowv1mvp.pdf',
-    github_url: null,
+    imageShape: 'phone',
+    links: [{ label: 'User flow (PDF)', href: '/tripPlanner/Userflowv1mvp.pdf' }],
     category: ['react-native', 'mobile-app'],
-    description: 'A trip planner app using Firebase and React native',
     key_techs: [
-      'Firebase Auth',
-      'react-native',
-      'MapBox API',
-      'redux',
-      'redux-saga',
-      'formik',
-      'redux-persist',
-      'Toast-message',
-      'react-native-animatable',
-      'moment js',
-      'firebase push notifications',
+      'React Native', 'Firebase Auth', 'Mapbox API', 'Redux', 'Redux-Saga', 'Formik',
+      'Redux Persist', 'Toast messages', 'react-native-animatable', 'Moment.js', 'Firebase push notifications',
     ],
   },
   {
-    id: '1',
+    id: 'qwertybit',
     name: 'QwertyBit Website',
+    summary: 'Tech services website for a client, built with Next.js.',
     featuredImage: '/images/qb/home.webp',
     imageArray: ['/images/qb/home.webp'],
-    deployed_url: 'https://qwertybit.com/',
-    github_url: null,
+    imageShape: 'wide',
+    links: [{ label: 'Live site', href: 'https://qwertybit.com/' }],
     category: ['react', 'next js', 'web-app'],
-    description: 'A tech service website for client using NEXT Js',
-    key_techs: ['React', 'Redux', 'Next Js', 'WP Api', 'Sass', 'Chakra UI'],
+    key_techs: ['React', 'Redux', 'Next.js', 'WP API', 'Sass', 'Chakra UI'],
+  },
+  {
+    id: 'express-login',
+    name: 'Express Login Template',
+    summary: 'Authentication template using Node and Express.',
+    featuredImage: '/images/expressAuth/login.webp',
+    imageArray: ['/images/expressAuth/login.webp', '/images/expressAuth/dashboard.webp'],
+    imageShape: 'wide',
+    links: [{ label: 'GitHub', href: 'https://github.com/aviaryan77/express-login-system' }],
+    category: ['node', 'express'],
+    key_techs: ['Node', 'Express', 'Bootstrap'],
   },
 ];
+
+export const getProject = (id: string) => projects.find((p) => p.id === id);
+
+const MOBILE_ARCHIVE = ['splitkaro-app', 'qtopia-app', 'peer-dispatch', 'twigo-shopee', 'cloud-flog', 'chat-app', 'cryptonomy', 'hylog', 'trip-planner'];
+const WEB_ARCHIVE = ['lybi', 'splitkaro-website', 'qtopia-website', 'picmate', 'bol-bihar', 'bindu-bhai', 'qwertybit', 'express-login'];
+
+export const archive = {
+  mobile: MOBILE_ARCHIVE.map(getProject),
+  web: WEB_ARCHIVE.map(getProject),
+};

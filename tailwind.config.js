@@ -1,35 +1,35 @@
+const v = (name) => `rgb(var(--c-${name}) / <alpha-value>)`;
+
 module.exports = {
-  content: [
-    './pages/**/*.tsx', './components/**/*.tsx'
-  ],
-  darkMode: 'class', // or 'media' or 'class'
+  content: ['./pages/**/*.tsx', './components/**/*.tsx'],
   theme: {
-    fontFamily: {
-      sans: ['ui-sans-serif', 'system-ui'],
-      kaushan: ['Kaushan Script'],
-    },
-    boxShadow: {
-      'custom-light': '0 0 10px #313131',
-      'custom-dark': '5px 5px  10px #0a0c0e, -5px -5px 10px #14161c',
-    },
     extend: {
+      fontFamily: {
+        display: ['"Space Grotesk"', 'system-ui', 'sans-serif'],
+        sans: ['"IBM Plex Sans"', 'system-ui', 'sans-serif'],
+        mono: ['"IBM Plex Mono"', 'ui-monospace', 'monospace'],
+      },
+      // Colours come from CSS variables so light/dark can switch (see globals.css).
       colors: {
-        green: {
-          DEFAULT: '#00f260',
+        ink: {
+          DEFAULT: v('ink'),
+          deep: v('ink-deep'),
+          raised: v('ink-raised'),
+          line: v('ink-line'),
+          line2: v('ink-line2'),
         },
-        dark: {
-          DEFAULT: '#010101',
-          100: '#0a0b0e',
-          200: '#16181d',
-          300: '#16181d',
-          500: '#0f1115',
-          700: '#202125',
+        text: {
+          DEFAULT: v('text'),
+          2: v('text-2'),
+          muted: v('text-muted'),
+          faint: v('text-faint'),
+        },
+        mint: {
+          DEFAULT: v('mint'),
+          hover: v('mint-hover'),
         },
       },
     },
-  },
-  variants: {
-    extend: { baxShadow: ['dark'] },
   },
   plugins: [],
 };

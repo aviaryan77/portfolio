@@ -1,34 +1,28 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Avinash Aryan – portfolio
 
-## Getting Started
+Live: https://aviaryan.vercel.app
 
-First, run the development server:
+An interactive, book-style portfolio built with Next.js, Tailwind CSS and Framer Motion.
+Pages turn with a 3D flip: two-page spreads on desktop, one page at a time on phones.
+There's also a "Read as one page" view.
+
+## Run locally
 
 ```bash
-npm run dev
-# or
-yarn dev
+yarn        # or npm install
+yarn dev    # http://localhost:3000
+yarn build && yarn start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Where things live
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+- `DATA.ts` – all content (profile, numbers, experience, skills, projects). Edit this first.
+- `components/book/pages.tsx` – the book's pages, in reading order.
+- `components/book/Book.tsx` – page-turn engine (flip animation, swipe, keyboard).
+- `components/ProjectDialog.tsx` – project details with screenshot carousel.
+- `pages/index.tsx` – SEO tags, JSON-LD and layout.
+- `public/og.jpg` – link-preview image (1200×630).
+- `public/Avinash_Aryan_Resume.pdf` – resume download.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Navigation: click beside the book, use ← → / PageUp / PageDown / Home / End, swipe on touch screens,
+or jump with links such as `/#work`, `/#experience`, `/#skills`, `/#about`, `/#archive`, `/#contact`.
